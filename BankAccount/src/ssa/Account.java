@@ -68,7 +68,7 @@ public class Account {
 
 	public double withdraw(double withdraw) {
 		
-		if (withdraw > 0.00 && withdraw < this.balance) {
+		if (withdraw > 0.00 && withdraw <= this.balance) {
 			this.balance -= withdraw;
 		} 
 		return this.balance;
