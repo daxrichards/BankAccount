@@ -14,7 +14,11 @@ public class Account {
 	String savingsDescrip;
 	double checkingBalance;
 	double savingsBalance;
-
+	
+	
+	
+	
+	
 	public void setChecking(int id, String description, double bal) {
 
 		checkAccountID = id;
@@ -92,6 +96,21 @@ public class Account {
 		}
 
 	}
+	public double savTrans(double transAmt, double chkBal){
+		
+		if(savingsBalance >= transAmt){
+		savingsBalance -= transAmt;
+				
+		 chkBal += transAmt;
+		System.out.println("\n***You have successfully transferred  $" +String.format("%.2f", transAmt) + " from your Savings to your Checking account***\n");
+		}
+		else{
+			System.out.println("\n***You do not have sufficient funds to make this transfer**\n");
+		}
+		return chkBal;
+		
+	}
+	
 	public void runText(String verbiage){
 		int width = 100;
 		int height = 20;
@@ -104,7 +123,7 @@ public class Account {
 
 		Graphics2D graphics = (Graphics2D) g;
 		graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-		graphics.drawString(verbiage, 1, 20);
+		graphics.drawString(verbiage, 0, 20);
 
 		// save this image
 		// ImageIO.write(image, "png", new File("/users/mkyong/ascii-art.png"));
