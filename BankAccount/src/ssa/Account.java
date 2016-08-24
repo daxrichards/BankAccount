@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 
 public class Account {
 
-	private int id = (int)Math.ceil(java.lang.Math.random()*100);
+	private int id = (int)Math.ceil(java.lang.Math.random()*1000);
 	public String description;
 	private double balance;
 
@@ -62,8 +62,10 @@ public class Account {
 	public double deposit(double deposit) {
 
 		//System.out.println("\nYou have successfully made a deposit of $" + String.format("%.2f", deposit));
-
-		return this.balance += deposit;
+        if (deposit > 0){
+        	return this.balance  += deposit;
+        }
+		return this.balance;
 	}
 
 	public double withdraw(double withdraw) {
@@ -79,8 +81,8 @@ public class Account {
 			account.balance -= amount;
 			this.balance += amount;
 		}
+	}
 		
-		}
 			
 	public String print(){
 		
