@@ -21,14 +21,14 @@ public class Account {
 
 	// Constructor to accept 1 String parameter for description
 	public Account(String description) {
-		this.description = description;
+		setDescription(description);
 
 	}
 
 	// Constructor to accept two parameters: for id and description
 	public Account(int id, String description) {
 		setId(id);
-		this.description = description;
+		setDescription(description);
 
 	}
 	
@@ -72,6 +72,7 @@ public class Account {
 		
 		if (withdraw > 0.00 && withdraw <= this.balance) {
 			this.balance -= withdraw;
+			
 		} 
 		return this.balance;
 	}

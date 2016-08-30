@@ -35,15 +35,16 @@ public class Savings extends Account {
 
 	public double CalcDepositInterest(int months) {
 	
-		if (isBelowMin() == false){
+		if ((isBelowMin() == false) && getInterestRate() > 0){
 			double amount = (((getInterestRate())/12)*months) * this.getBalance();
-			super.deposit(amount);
+			deposit(amount);
 			totIntPaid += amount;
 			return amount; ///This was added in case you would like to pass as a parameter in the deposit method directly
 	   }
 		else{
 			return 0.00;
 			}
+		
 				}
 public String print(){
 	

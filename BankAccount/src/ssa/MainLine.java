@@ -7,10 +7,10 @@ public class MainLine {
                
        
     Savings newSavings = new Savings();
-    newSavings.deposit(500.00);
-    newSavings.deposit(-1500.00);
-    newSavings.setInterestRate(.015);
-    newSavings.CalcDepositInterest(4);
+    newSavings.deposit(100.00);
+   
+    newSavings.setInterestRate(1.0);
+    newSavings.CalcDepositInterest(6);
    
   
    // newSavings.deposit(newSavings.CalcDepositInterest(4));
