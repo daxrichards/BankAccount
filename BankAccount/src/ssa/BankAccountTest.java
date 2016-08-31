@@ -39,14 +39,14 @@ public class BankAccountTest {
 		@Test
 		public void testSetId(){
 		//Private Method - tested within the constructor
-		/*Account testAccount = new Account(111, "New Account");
-		assertEquals(111, testAccount.getId());
-		Account testAccount = new Account(999, "New Account");
-		assertEquals(999, testAccount.getId());
-		Account testAccount = new Account(000, "New Account");
-		assertEquals(000, testAccount.getId());
 		Account testAccount = new Account(111, "New Account");
-		assertEquals(234, testAccount.getId()); */
+		assertEquals(111, testAccount.getId());
+		Account testAccount1 = new Account(999, "New Account");
+		assertEquals(999, testAccount1.getId());
+		Account testAccount2 = new Account(000, "New Account");
+		assertEquals(000, testAccount2.getId());
+		Account testAccount3 = new Account(234, "New Account");
+		assertEquals(234, testAccount3.getId()); 
 		}
 			
 		/***************************************************/
