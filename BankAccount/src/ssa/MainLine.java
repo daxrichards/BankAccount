@@ -7,7 +7,7 @@ public class MainLine {
                
        
     Savings newSavings = new Savings();
-    newSavings.deposit(100.00);
+    newSavings.deposit(156.667);
    
     newSavings.setInterestRate(1.0);
     newSavings.CalcDepositInterest(6);
